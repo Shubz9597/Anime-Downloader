@@ -99,7 +99,8 @@ class Downloader():
             Style.RESET_ALL
         )
         sys.stderr.flush()
-
+        
+#Main Downloading Function
 def main(episodes):
     name =''
     for item in range(len(episodes)):

@@ -1,3 +1,5 @@
+#Anime Downloader
+#Comment or Uncomment respective web browser users
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 #from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
@@ -19,19 +21,17 @@ class AnimeDLR():
 
  
     def setUp(self, chromedriver):
+        #For Chrome
         self.chromedriver =  chromedriver
         self.driver = webdriver.Chrome(self.chromedriver)
+        #For FireFox
         #binary = FirefoxBinary('firefox')
         #self.driver = webdriver.Firefox(firefox_binary=binary)
  
     def urlOpen(self):
         driver = self.driver
         self.url = "https://www.animeout.xyz/?s="+self.query
-        #print(self.url)
         driver.get(self.url)
-        # search = driver.find_element_by_id("s")
-        # search.send_keys(self.searchItem)
-        # search.send_keys(Keys.RETURN)
  
  
     def animeSelect(self):
