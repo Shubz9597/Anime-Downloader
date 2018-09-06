@@ -3,7 +3,7 @@
 An Automated Downloader that downloads episodes of the particular Anime, you want to Watch. Uses website [Animeout](http://www.Animeout.xyz)
 Downloader Script Credits [Getit](http://www.github.com/ankitjain28may/getit)
 
-##Installation
+## Installation
 
 * Install `python` >= v3.0
 	Download [Python](https://www.python.org/downloads/)
@@ -29,7 +29,7 @@ After Installing Python install these **packages**
 	Download `[GeckoDriver]`(https://github.com/mozilla/geckodriver/releases)
 
 
-##Usage
+## Usage
 
 * Clone Both the Scripts into your desired location
 * Put the _ChromeDriver_ or _GeckoDriver_ in the desired location after extraction
