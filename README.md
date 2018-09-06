@@ -23,10 +23,10 @@ After Installing Python install these **packages**
 	```
 
 * Install `Chromedriver`:- For Chrome Users
-	Download `[Chromedriver]`(https://sites.google.com/a/chromium.org/chromedriver/downloads)
+	Download `[Chromedriver](https://sites.google.com/a/chromium.org/chromedriver/downloads)`
 
 * Install `GeckoDriver`:- For FireFox Users
-	Download `[GeckoDriver]`(https://github.com/mozilla/geckodriver/releases)
+	Download `[GeckoDriver](https://github.com/mozilla/geckodriver/releases)`
 
 
 ## Usage
