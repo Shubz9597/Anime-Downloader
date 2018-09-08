@@ -1,7 +1,6 @@
 # Anime-Downloader
 
 An Automated Downloader that downloads episodes of the particular Anime, you want to Watch. Uses website [Animeout](http://www.Animeout.xyz)
-Downloader Script Credits [Getit](http://www.github.com/ankitjain28may/getit)
 
 ## Installation
 
@@ -41,4 +40,5 @@ After Installing Python install these **packages**
 	```
 * Write the name of the Anime you want to download.
 
-Note:- The Episodes will be Downloaded in the same location where the scripts are presesnt. Desired Path Location will be added in future.
+Note:- Added Scroll Down function to Complete the list, so if you want to select the anime, just scroll up the window, then select the option.
+Note:- The Episodes will be Downloaded in `C:\Anime Downloads`

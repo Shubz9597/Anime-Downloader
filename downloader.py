@@ -2,6 +2,7 @@ from urllib.request import urlopen
 from time import time, sleep
 import adls
 import sys
+import os
 from colorama import Fore, Style
 from colorama import init
 init()
@@ -102,16 +103,18 @@ class Downloader():
         
 #Main Downloading Function
 def main(episodes):
+    newpath ="C:\\Anime Downloads\\"
+    if not os.path.exists(newpath):
+        os.makedirs(newpath)
     name =''
     for item in range(len(episodes)):
         name =''
-        name+=((episodes[item].split("[AnimeOut]"))[1]).replace('%20',' ')
+        name+=((episodes[item].split("[AnimeOut]"))[1]).replace('%20','')
         tester = episodes[item].replace('[','%5B').replace('[','%5D')
         print(name)
-        with open(name, 'wb') as out_file:
+        with open(newpath+name, 'wb') as out_file:
             with urlopen(tester) as fp:
                 info = fp.info()
-                print(info)
                 if 'Content-Length' in info:
                     x = int(info['Content-Length'])
                 else:

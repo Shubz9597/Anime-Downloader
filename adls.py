@@ -10,7 +10,6 @@ import downloader
 class AnimeDLR():
 
     def userInput(self):
-        print("\n")
         print("Which Anime You want to Download")
         self.name =input()
         return self.name
@@ -35,23 +34,24 @@ class AnimeDLR():
  
  
     def animeSelect(self):
-        searchNames = self.driver.find_elements_by_xpath('//article/div/div[@class="post-header"]/h3/a')
+        #self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")  #Added if you want to scroll to the bottom
+        self.searchNames = self.driver.find_elements_by_xpath('//article/div/div[@class="post-header"]/h3/a')
         self.episodes =[]
-        for x in range(len(searchNames)):
-            print (searchNames[x].text)
+        for x in range(len(self.searchNames)):
+            print (self.searchNames[x].text)
         print("Which Series to download")
-        choice= int(input())
-        searchNames[choice-1].click()
+        self.choice= int(input())
+        self.searchNames[self.choice-1].click()
         epiList = self.driver.find_elements_by_link_text("Direct Download")
-        for x in range(len(epiList)):
-            qlink ="http://public.animeout.xyz"+ ((epiList[x].get_attribute('href')).split('/',1)[1])
+        if len(epiList) == 0:
+            epiList = self.driver.find_elements_by_partial_link_text("Episode")
+        print("From Which Episodes you want to download, If you are continuing the series, Enter 1 if you want the series from Start")
+        seriesNo = int(input())
+        for x in range((seriesNo-1), len(epiList)):
+            qlink ="http://public.animeout.xyz"+((epiList[x].get_attribute('href')).split('/',1)[1])
             self.episodes.append(qlink)
-            print(self.episodes[x])
-
-        return self.episodes 
-
+        return self.episodes
     
- 
  
     def shutDown(self):
         self.driver.quit()
